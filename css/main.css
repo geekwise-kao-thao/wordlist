@@ -1,0 +1,31 @@
+body{
+    background-color:lightblue;
+    margin:0 auto;
+    text-align:center;
+    font-size:65.2%;
+    font-family:sans-serif;
+}
+
+input{
+    width:80%;
+    height:4rem;
+    margin-top:2rem;
+    border-radius: 5px;
+    font-size:1.4rem;
+    text-transform:uppercase;
+    text-align:center;
+}
+
+p{
+    font-size:2rem;
+    color:white;
+    text-transform:uppercase;
+}
+
+#wordlist{
+    display:inline-block;
+    width:30%;
+    height:30rem;
+    background-color:coral;
+    margin-top:2rem;
+}
