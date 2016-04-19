@@ -3,6 +3,7 @@ var words;
 var word_list_container;
 var current_word;
 var new_word;
+var word_list_container_instruction;
 
 words = [
     
@@ -24,6 +25,7 @@ input_element.addEventListener('keydown',function(event){
             //word_list_container.appendChild(new_word);
             
             new_word.textContent = this.value;
+            //line 28 did not work b/c word[0] is not a Node()
             //words[0].parentNode.insertBefore(new_word, words[0].nextSibling);
             
             
@@ -43,6 +45,9 @@ input_element.addEventListener('keydown',function(event){
 word_list_container = document.createElement('div');
 word_list_container.setAttribute('id','wordlist');
 
+word_list_container_instruction = document.createElement('p');
+word_list_container_instruction.textContent = 'Double click on a word to delete a word';
+word_list_container_instruction.setAttribute('id','instruction');
 var create_words = function(element_type,element_id){
     
     var element = document.createElement(element_type);
@@ -56,6 +61,7 @@ var create_words = function(element_type,element_id){
 document.addEventListener('DOMContentLoaded',function(event){
     
     document.body.appendChild(input_element);
+    document.body.appendChild(word_list_container_instruction);
     document.body.appendChild(word_list_container);
     
     for(var i=0; i<words.length; i++){

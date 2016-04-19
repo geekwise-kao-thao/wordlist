@@ -22,10 +22,15 @@ p{
     text-transform:uppercase;
 }
 
+#instruction{
+    font-size:.7rem;
+    margin-top:2rem;
+    color:coral;
+}
+
 #wordlist{
     display:inline-block;
-    width:30%;
+    width:40%;
     height:30rem;
     background-color:coral;
-    margin-top:2rem;
 }
