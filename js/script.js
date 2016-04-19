@@ -28,11 +28,12 @@ input_element.addEventListener('keydown',function(event){
             //line 28 did not work b/c word[0] is not a Node()
             //words[0].parentNode.insertBefore(new_word, words[0].nextSibling);
             
-            
-            word_list_container.children[0].parentElement.insertBefore(new_word, word_list_container.children[0]);
+            if(word_list_container.children.length === 0){
+                word_list_container.appendChild(new_word);
+            }else if(word_list_container.children.length > 0){
+                word_list_container.children[0].parentElement.insertBefore(new_word, word_list_container.children[0]);
+            };
 
-            
-            // words.push(this.value);
             this.value = null;
             
             new_word.addEventListener('dblclick',function(event){
